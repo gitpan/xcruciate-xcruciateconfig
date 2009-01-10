@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Xcruciate-XcruciateConfig.t
+lib/Xcruciate/XcruciateConfig.pm
