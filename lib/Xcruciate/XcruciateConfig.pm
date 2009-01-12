@@ -4,7 +4,7 @@ package Xcruciate::XcruciateConfig;
 use Exporter;
 @ISA = ('Exporter');
 @EXPORT = qw();
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 use strict;
 use Xcruciate::Utils;
@@ -255,6 +255,8 @@ The best way to report bugs is via the Xcruciate bugzilla site (F<http://www.xcr
 B<0.01>: First upload
 
 B<0.03>: First upload containing module
+
+B<0.04> Changed minimum perl version to 5.8.8
 
 =back
 
