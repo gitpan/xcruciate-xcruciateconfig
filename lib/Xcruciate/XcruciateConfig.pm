@@ -4,7 +4,7 @@ package Xcruciate::XcruciateConfig;
 use Exporter;
 @ISA = ('Exporter');
 @EXPORT = qw();
-our $VERSION = 0.04;
+our $VERSION = 0.05;
 
 use strict;
 use Xcruciate::Utils;
@@ -93,7 +93,7 @@ sub new {
 	push @errors,sprintf("No name attribute for element '%s'",$entry->nodeName) unless $entry->hasAttribute('name');
 	my $entry_record = $xcr_settings->{$entry->getAttribute('name')};
 	if (not defined $entry_record) {
-	    next;
+	    warn "Unknown xcruciate config entry '" . ($entry->getAttribute('name')) ."'";
 	} elsif (not($entry->nodeName eq $entry_record->[0])){
 	    push @errors,sprintf("Entry called %s should be a %s not a %s",$entry->getAttribute('name'),$entry_record->[0],$entry->nodeName);
 	} elsif ((not $entry->textContent) and ((not $entry_record->[1]) or $entry->textContent!~/^\s*$/s)) {
@@ -257,6 +257,8 @@ B<0.01>: First upload
 B<0.03>: First upload containing module
 
 B<0.04> Changed minimum perl version to 5.8.8
+
+B<0.05> Warn about unknown entries
 
 =back
 
