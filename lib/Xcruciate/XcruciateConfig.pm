@@ -4,10 +4,10 @@ package Xcruciate::XcruciateConfig;
 use Exporter;
 @ISA = ('Exporter');
 @EXPORT = qw();
-our $VERSION = 0.05;
+our $VERSION = 0.06;
 
 use strict;
-use Xcruciate::Utils;
+use Xcruciate::Utils 0.06;
 
 =head1 NAME
 
